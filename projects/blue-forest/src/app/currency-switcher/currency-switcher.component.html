@@ -1,0 +1,5 @@
+<mat-select [(value)]="currency">
+  @for (currency of currencies; track currency) {
+    <mat-option [value]="currency">{{currency}}</mat-option>
+  }
+</mat-select>

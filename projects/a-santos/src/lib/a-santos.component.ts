@@ -6,8 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
   standalone: true,
   imports: [MatButtonModule],
   template: `
-    <p>a-santos works!</p>
-    <button mat-flat-button color="primary">Primary</button>
+    <button mat-flat-button color="primary">a-santos works!</button>
   `,
   styles: ``,
 })

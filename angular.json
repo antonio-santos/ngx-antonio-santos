@@ -9,7 +9,11 @@
   "projects": {
     "blue-forest": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": true
+        }
+      },
       "root": "projects/blue-forest",
       "sourceRoot": "projects/blue-forest/src",
       "prefix": "bf",
@@ -20,9 +24,7 @@
             "outputPath": "dist/blue-forest",
             "index": "projects/blue-forest/src/index.html",
             "browser": "projects/blue-forest/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/blue-forest/tsconfig.app.json",
             "assets": [
               {
@@ -83,10 +85,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/blue-forest/tsconfig.spec.json",
             "assets": [
               {
@@ -105,6 +104,11 @@
     },
     "a-santos": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": true
+        }
+      },
       "root": "projects/a-santos",
       "sourceRoot": "projects/a-santos/src",
       "prefix": "as",
@@ -128,10 +132,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/a-santos/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
       }
